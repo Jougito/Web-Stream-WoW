@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>WoWJizzard | Directos</title>
+	<meta name="description" content="WoWJizzard, servidor privado de World of Warcraft" >
+	<meta name="viewport" content="width=device-width">
+	<meta name="author" content="Jougito - Dev Jougito"/>
+	<script src="/entry/jquery-1.10.2.min.js"></script>
+	<script src="/entry/jquery-detectmobilebrowser.js"></script>
+	<link href="/entry/shared.css" rel="stylesheet">
+
+	<script type="text/javascript">
+	function checkCheckBox(f) {
+	  if (f.agree.checked == false) {
+		alert('Por favor seleccione la casilla de aceptar');
+		return false;
+	  } else
+		return true;
+	}
+	</script>
+</head>
+
+<body>
+	<div id="top-bar">
+		<div>
+			<span>Directo #1 | Arena de Ulduar</span>
+		</div>
+	</div>
+
+	<div id="wrapper">
+		<div id="video-background"></div>
+		<div class="content">
+			<div>
+				<div>
+					<div>
+<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://es.twitch.tv/widgets/live_embed_player.swf?channel=wowjizzard" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://es.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=es.twitch.tv&channel=wowjizzard&auto_play=true&start_volume=25" /></object><a href="http://es.twitch.tv/jougito">
+</br>Si quieres ir al canal de WoWJizzard, pincha aqu&iacute;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	if (typeof jQuery != 'undefined') {
+		if(!jQuery.browser.mobile && $(window).width() >= 1200) {
+
+			var v = '<video id="video-element1" preload="auto" autoplay="true" loop="loop">';
+			v += '<source src="/entry/videos/left.mp4" type="video/mp4">';
+			v += '<source src="/entry/videos/left.webm" type="video/webm">';
+			v += '</video>';
+			v += '<video id="video-element2" preload="auto" autoplay="true" loop="loop">';
+			v += '<source src="/entry/videos/right.mp4" type="video/mp4">';
+			v += '<source src="/entry/videos/right.webm" type="video/webm">';
+			v += '</video>';
+
+			$("#video-background").html(v);
+			$("#video-background video").on("canplaythrough", function(){
+				if ($(this).css("opacity") != 1) {
+					$(this).delay(100).fadeTo(4000,1);
+				}
+			});
+		} else {
+			$("#video-background").hide();
+		}
+	}
+});
+</script>
+<br><br><br><br></br></br></br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="copyright absolute" align="center">&copy; 2015 Jougito | Todos los Derechos Reservados</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.paybas.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "2"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</body>
+</html>
