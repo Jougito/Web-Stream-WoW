@@ -1,0 +1,227 @@
+/* Estilo WoWJizzard */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	color: #FFF;
+	font-size: 10px;
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+	background: #030309 url("/entry/bg.jpg") no-repeat scroll 50% -40px;
+}
+img {
+	border:none;
+}
+
+a {
+	text-decoration: none;
+	color: #ffb019;
+	font-weight: bold;
+}
+a:hover {
+	color: white;
+}
+
+.content, #top-bar > div, .error-bg {
+	max-width: 715px;
+	min-width: 360px;
+}
+
+#top-bar {
+	background: url("/entry/bar-bg.jpg") no-repeat scroll 50% 100% #002540;
+	border-bottom: 1px solid #05517E;
+	box-shadow: 0 0 3px 3px #000000;
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	font-size: 1.3rem;
+	line-height: 40px;
+}
+#top-bar > div {
+	border-right: 3px solid #042E45;
+	border-left: 1px solid #011323;
+	height: 40px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#top-bar span, #top-bar a.cell {
+	border-left: 2px solid #042E45;
+	border-right: 1px solid #011323;
+	display: inline-block;
+	float: left;
+	height: 40px;
+	padding: 0 17px;
+	font-weight: bold;
+	text-shadow: 1px 1px #000000;
+}
+#top-bar span {
+	color: #FFF;
+}
+#top-bar > div *:last-child {
+	border-right: none !important;
+}
+#top-bar a.cell:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	text-decoration: none;
+}
+
+#wrapper {
+	/*position: relative;*/
+}
+.content, .content > div, .content > div > div {
+	background-color: #1B1B1B;
+	border: 1px solid #000000;
+	padding: 2px;	
+}
+.content {
+	margin: 100px auto 30px auto;
+	box-shadow: 0 0 10px #000000;
+}
+.content > div {
+	background-color: #313131;
+}
+.content > div > div {
+	/*background: linear-gradient(to bottom, #171717 0px, rgba(49, 49, 49, 0) 82px) repeat scroll 0 0 #313131;*/
+	background: #1b1b1b url('/entry/content-bg.jpg') no-repeat 50% 0;
+}
+.content > div > div > div {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0px, rgba(27, 27, 27, 0) 46px) repeat scroll 0 0;
+	padding: 30px 30px 10px 30px;
+	text-align: center;
+	position: relative;
+}
+
+form {
+	margin: 20px 0 0 0;
+	padding: 0;
+	text-align: center;
+}
+form p {
+	margin-bottom: 10px;
+	line-height: 18px;
+	font-size: 11px;
+}
+form p input {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+textarea {
+	background: #0d1a2d;
+	border: 1px solid #7F7F7F;
+	color: #ffac04;
+	width: 100%;
+	padding: 10px;
+	resize: vertical;
+	width: 95%;
+	min-height: 200px;
+	max-height: 600px;
+	transition: border-color 0.25s ease-in-out 0s;
+	margin: 0 auto;
+}
+textarea:focus {
+	border-color: #11A3EA;
+}
+.icon-alert {
+	background: url('/entry/alert.png') no-repeat 50% 50%;
+	height: 63px;
+	width: 63px;
+	position: absolute;
+	top: -30px;
+	left: -25px;
+}
+.icon-pp {
+	background: url('/entry/paypal.png') no-repeat 50% 50%;
+	height: 29px;
+	width: 100px;
+	position: absolute;
+	top: -20px;
+	left: 0px;
+}
+
+body.error {
+	background-image: none;
+}
+.error-bg {
+	background: url('/error/error-murloc.jpg') #000000 no-repeat center top;
+	font-family: "Arial Black",Arial,sans-serif;
+	height: 450px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: 0 0 3px 3px #000000 inset;
+}
+.error-bg h1 {
+	color: #d21f16;
+	width: 100%;
+	padding-top: 350px;
+	padding-bottom: 10px;
+	margin: 0;
+	font-size: 22px;
+}
+.error-bg a {
+	color: #CCCCCC;
+	width: 100%;
+	font-size: 18px;
+	letter-spacing: -1px;
+	font-weight: normal;
+}
+.error-bg a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+	#top-bar > div {
+		border-right: none;
+		border-left: none;
+	}
+	.content {
+		margin: 30px auto 0;
+	}
+	body.donate .content > div > div > div {
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 999px) {
+	body {
+		background-image: url("/entry/bg-small.jpg");
+	}
+	#video-background {
+		display: none !important;;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#wrapper {
+		position: relative;
+		overflow: hidden;
+		min-height: 880px;
+	}
+	#video-background {
+		left: 50%;
+		position: absolute;
+		top: 0;
+		z-index: -1000;
+	}
+	#video-background video {
+		opacity: 0;
+	}
+	#video-element1 {
+		background-image: none;
+		position: absolute;
+		top: 506px;
+		right: 440px;
+	}
+	#video-element2 {
+		background-image: none;
+		position: absolute;
+		top: 349px;
+		left: 468px;
+	}
+}
